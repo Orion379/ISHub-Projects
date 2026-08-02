@@ -3,7 +3,304 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Online Clothing Store</title>
   </head>
-  <body></body>
+
+  <body bgcolor="#F0FFFF ">
+    <header>
+      <h1><strong>Online Clothing Store</strong></h1>
+
+      <nav>
+        &nbsp;&nbsp;&nbsp; <a href="#">Home</a>&nbsp;&nbsp;&nbsp;
+        <a href="#">Products</a>&nbsp;&nbsp;&nbsp;
+        <a href="#">About</a>&nbsp;&nbsp;&nbsp;
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="category">
+        <h2>Men's Clothing</h2>
+
+        <table cellpadding="20">
+          <tr>
+            <td>
+              <img
+                src="../images/mentshirt.avif"
+                alt="Men's T-shirt"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/menshirt.webp"
+                alt="Men's shirt"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/menjeans.jpeg"
+                alt="Men's jeans"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/menjacket.jpeg"
+                alt="Men's jacket"
+                width="250"
+                height="300"
+              />
+            </td>
+          </tr>
+        </table>
+
+        <h2>Women's Clothing</h2>
+
+        <table cellpadding="20">
+          <tr>
+            <td>
+              <img
+                src="../images/womentshirt.jpeg"
+                alt="Women's T-shirt"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/womenshirt.jpeg"
+                alt="Women's shirt"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/womenjeans.jpeg"
+                alt="Women's jeans"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/womenjacket.jpeg"
+                alt="Women's jacket"
+                width="250"
+                height="300"
+              />
+            </td>
+          </tr>
+        </table>
+
+        <h2>Children's Clothing</h2>
+
+        <table cellpadding="20">
+          <tr>
+            <td>
+              <img
+                src="../images/childrentshirt.jpeg"
+                alt="Children's T-shirt"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/childrenshirt.jpeg"
+                alt="Children's shirt"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/childrenjeans.jpg"
+                alt="Children's jeans"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/childrenjacket.jpeg"
+                alt="Children's jacket"
+                width="250"
+                height="300"
+              />
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="featured">
+        <h2>Featured Products</h2>
+
+        <table cellpadding="20">
+          <tr>
+            <td>
+              <img
+                src="../images/featured1.jpeg"
+                alt="Featured clothing item 1"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/featured2.jpeg"
+                alt="Featured clothing item 2"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/featured3.jpeg"
+                alt="Featured clothing item 3"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/featured4.jpeg"
+                alt="Featured clothing item 4"
+                width="250"
+                height="300"
+              />
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="trends">
+        <h2>Latest Trends</h2>
+
+        <table cellpadding="20">
+          <tr>
+            <td>
+              <img
+                src="../images/trends.jpeg"
+                alt="Trend 1"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/trends2.jpeg"
+                alt="Trend 2"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/trends3.jpeg"
+                alt="Trend 3"
+                width="250"
+                height="300"
+              />
+            </td>
+            <td>
+              <img
+                src="../images/trends4.jpeg"
+                alt="Trend 4"
+                width="250"
+                height="300"
+              />
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="contact">
+        <h2>Contact Us</h2>
+
+        <p>
+          If you have any questions or concerns, feel free to reach out to us!
+        </p>
+
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <br /><br />
+
+          <label for="number">Phone Number:</label>
+          <input type="tel" id="number" name="number" required />
+
+          <br /><br />
+
+          <label for="subject">What can we help you with?</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select an option</option>
+            <option value="order">Order Inquiry</option>
+            <option value="product">Product Question</option>
+            <option value="return">Return or Exchange</option>
+            <option value="other">Other</option>
+          </select>
+
+          <br /><br />
+
+          <label for="message">Message:</label>
+          <br />
+
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            required
+          ></textarea>
+
+          <br /><br />
+
+          <button type="submit">Submit</button> <br />
+          <br />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <table bgcolor="#ADD8E6" width="100%" padding="none">
+        <tr>
+          <td>
+            &nbsp;&nbsp;
+            <h3>Contact Info</h3>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:info@onlineclothingstore.com"
+              >info@onlineclothingstore.com</a
+            >
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#">+251911123456</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#">Telegram</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#">Instagram</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#">X</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#">YouTube</a>
+
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy; 2026
+              Online Clothing Store. All rights reserved.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </footer>
+  </body>
 </html>
