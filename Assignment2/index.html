@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addis Threads</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Addis Threads <span>Since 2026</span></div>
+      <nav>
+        <ul>
+          <li><a href="#shop">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <button class="cart-btn" id="cartBtn">
+          Bag <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Addis Ababa · Made to shine</span>
+        <h1>Everyday clothing, <em>cut for the city.</em></h1>
+        <p class="lede">
+          Shirts, denim and jackets for men, women and kids picked for comfort
+          first, styled for wherever your day takes you.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#shop">Shop the collection</a>
+          <a class="btn-secondary" href="#featured">See what's new</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="frame">
+          <img src="../images/featured1.jpeg" alt="Featured clothing item" />
+        </div>
+        <div class="tag">
+          <strong>New in</strong>
+          Latest trends
+        </div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Browse</span>
+          <h2>Shop by category</h2>
+        </div>
+      </div>
+
+      <div class="pills">
+        <button class="pill active" data-target="men">Men</button>
+        <button class="pill" data-target="women">Women</button>
+        <button class="pill" data-target="kids">Children</button>
+      </div>
+
+      <div class="grid category-grid active" id="men">
+        <article class="card">
+          <span class="tag-badge tag-men">Men</span>
+          <div class="thumb">
+            <img src="../images/mentshirt.avif" alt="Men's T-shirt" />
+          </div>
+          <div class="info">
+            <h3>Classic Crew Tee</h3>
+            <div class="price-row">
+              <span class="price">ETB 850</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-men">Men</span>
+          <div class="thumb">
+            <img src="../images/menshirt.webp" alt="Men's shirt" />
+          </div>
+          <div class="info">
+            <h3>Button-Up Shirt</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,450</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-men">Men</span>
+          <div class="thumb">
+            <img src="../images/menjeans.jpeg" alt="Men's jeans" />
+          </div>
+          <div class="info">
+            <h3>Straight-Fit Denim</h3>
+            <div class="price-row">
+              <span class="price">ETB 2,100</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-men">Men</span>
+          <div class="thumb">
+            <img src="../images/menjacket.jpeg" alt="Men's jacket" />
+          </div>
+          <div class="info">
+            <h3>Utility Jacket</h3>
+            <div class="price-row">
+              <span class="price">ETB 3,200</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid category-grid" id="women">
+        <article class="card">
+          <span class="tag-badge tag-women">Women</span>
+          <div class="thumb">
+            <img src="../images/womentshirt.jpeg" alt="Women's T-shirt" />
+          </div>
+          <div class="info">
+            <h3>Relaxed Fit Tee</h3>
+            <div class="price-row">
+              <span class="price">ETB 800</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-women">Women</span>
+          <div class="thumb">
+            <img src="../images/womenshirt.jpeg" alt="Women's shirt" />
+          </div>
+          <div class="info">
+            <h3>Tailored Blouse</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,600</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-women">Women</span>
+          <div class="thumb">
+            <img src="../images/womenjeans.jpeg" alt="Women's jeans" />
+          </div>
+          <div class="info">
+            <h3>High-Rise Denim</h3>
+            <div class="price-row">
+              <span class="price">ETB 2,050</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-women">Women</span>
+          <div class="thumb">
+            <img src="../images/womenjacket.jpeg" alt="Women's jacket" />
+          </div>
+          <div class="info">
+            <h3>Belted Jacket</h3>
+            <div class="price-row">
+              <span class="price">ETB 3,400</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid category-grid" id="kids">
+        <article class="card">
+          <span class="tag-badge tag-kids">Kids</span>
+          <div class="thumb">
+            <img src="../images/childrentshirt.jpeg" alt="Children's T-shirt" />
+          </div>
+          <div class="info">
+            <h3>Playtime Tee</h3>
+            <div class="price-row">
+              <span class="price">ETB 450</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-kids">Kids</span>
+          <div class="thumb">
+            <img src="../images/childrenshirt.jpeg" alt="Children's shirt" />
+          </div>
+          <div class="info">
+            <h3>School Shirt</h3>
+            <div class="price-row">
+              <span class="price">ETB 600</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-kids">Kids</span>
+          <div class="thumb">
+            <img src="../images/childrenjeans.jpg" alt="Children's jeans" />
+          </div>
+          <div class="info">
+            <h3>Adjustable Denim</h3>
+            <div class="price-row">
+              <span class="price">ETB 950</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag-badge tag-kids">Kids</span>
+          <div class="thumb">
+            <img src="../images/childrenjacket.jpeg" alt="Children's jacket" />
+          </div>
+          <div class="info">
+            <h3>Puffer Jacket</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,750</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="featured">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Handpicked</span>
+          <h2>Featured products</h2>
+        </div>
+      </div>
+      <div class="shelf">
+        <article class="card">
+          <div class="thumb">
+            <img
+              src="../images/featured1.jpeg"
+              alt="Featured clothing item 1"
+            />
+          </div>
+          <div class="info">
+            <h3>Studio Pick 01</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,900</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img
+              src="../images/featured2.jpeg"
+              alt="Featured clothing item 2"
+            />
+          </div>
+          <div class="info">
+            <h3>Studio Pick 02</h3>
+            <div class="price-row">
+              <span class="price">ETB 2,300</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img
+              src="../images/featured3.jpeg"
+              alt="Featured clothing item 3"
+            />
+          </div>
+          <div class="info">
+            <h3>Studio Pick 03</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,650</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img
+              src="../images/featured4.jpeg"
+              alt="Featured clothing item 4"
+            />
+          </div>
+          <div class="info">
+            <h3>Studio Pick 04</h3>
+            <div class="price-row">
+              <span class="price">ETB 2,750</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="trends-band">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Right now</span>
+          <h2>Latest trends</h2>
+        </div>
+      </div>
+      <div class="shelf">
+        <article class="card">
+          <div class="thumb">
+            <img src="../images/trends.jpeg" alt="Trend 1" />
+          </div>
+          <div class="info">
+            <h3>Trend Edit 01</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,300</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img src="../images/trends2.jpeg" alt="Trend 2" />
+          </div>
+          <div class="info">
+            <h3>Trend Edit 02</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,550</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img src="../images/trends3.jpeg" alt="Trend 3" />
+          </div>
+          <div class="info">
+            <h3>Trend Edit 03</h3>
+            <div class="price-row">
+              <span class="price">ETB 1,900</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img src="../images/trends4.jpeg" alt="Trend 4" />
+          </div>
+          <div class="info">
+            <h3>Trend Edit 04</h3>
+            <div class="price-row">
+              <span class="price">ETB 2,050</span>
+              <button class="add-btn">Add to bag</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <span class="eyebrow" style="color: var(--gold-light)"
+            >Get in touch</span
+          >
+          <h2>Questions? We're around.</h2>
+          <p>
+            Order questions, sizing help, or a return you'd like to sort out —
+            drop us a message and we'll get back to you within a day.
+          </p>
+          <ul>
+            <li>
+              <a href="mailto:info@onlineclothingstore.com"
+                >info@onlineclothingstore.com</a
+              >
+            </li>
+            <li><a href="#">+251 911 123 456</a></li>
+            <li><a href="#">Telegram · Instagram · X · YouTube</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row two">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-row">
+              <label for="number">Phone number</label>
+              <input type="tel" id="number" name="number" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="subject">What can we help you with?</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select an option</option>
+              <option value="order">Order inquiry</option>
+              <option value="product">Product question</option>
+              <option value="return">Return or exchange</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send message</button>
+
+          <div class="form-success" id="formSuccess">
+            <h3>Message sent</h3>
+            <p>Thanks for reaching out. we'll reply within a 3 days.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <h3>Addis Threads</h3>
+          <p>Everyday clothing for men, women and kids.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Telegram</a>
+          <a href="#">Instagram</a>
+          <a href="#">X</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Addis Threads. All rights reserved.</span>
+        <span>Addis Ababa, Ethiopia</span>
+      </div>
+    </footer>
+
+    <script>
+      const pills = document.querySelectorAll(".pill");
+      const grids = document.querySelectorAll(".category-grid");
+      pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          pills.forEach((p) => p.classList.remove("active"));
+          grids.forEach((g) => g.classList.remove("active"));
+          pill.classList.add("active");
+          document.getElementById(pill.dataset.target).classList.add("active");
+        });
+      });
+
+      let cartCount = 0;
+      const cartCountEl = document.getElementById("cartCount");
+      document.querySelectorAll(".add-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          cartCount++;
+          cartCountEl.textContent = cartCount;
+          btn.textContent = "Added";
+          setTimeout(() => (btn.textContent = "Add to bag"), 900);
+        });
+      });
+
+      const form = document.getElementById("contactForm");
+      const success = document.getElementById("formSuccess");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        form.querySelectorAll("*").forEach((el) => {
+          if (el.id !== "formSuccess") el.style.display = "none";
+        });
+        success.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
