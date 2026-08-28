@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 0 20px;
+        color: #222;
+        line-height: 1.5;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      section {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+      h2 {
+        margin-top: 0;
+        font-size: 1.1rem;
+        color: #555;
+      }
+      button {
+        padding: 6px 14px;
+        margin: 4px 6px 4px 0;
+        border: 1px solid #999;
+        border-radius: 5px;
+        background: #f5f5f5;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #e8e8e8;
+      }
+
+      /* Q1 */
+      #q1-text.red {
+        color: red;
+      }
+
+      /* Q2 */
+      #gallery img {
+        width: 250px;
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+      }
+      .thumb-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+      }
+      .thumb-list li {
+        cursor: pointer;
+        padding: 4px 10px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+      .thumb-list li:hover {
+        background: #eee;
+      }
+      #main-image {
+        width: 350px;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      /* Q3 */
+      #todo-list {
+        list-style: none;
+        padding: 0;
+      }
+      #todo-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        border-bottom: 1px solid #eee;
+      }
+      #todo-list li span {
+        cursor: pointer;
+      }
+      #todo-list li.done span {
+        text-decoration: line-through;
+        color: #999;
+      }
+      #todo-list li button {
+        margin: 0;
+      }
+
+      /* Q4 */
+      #count-display {
+        font-size: 2rem;
+        margin: 0 12px;
+        display: inline-block;
+        min-width: 40px;
+        text-align: center;
+      }
+
+      /* Q5 */
+      #sibling-list li {
+        cursor: pointer;
+        padding: 4px 0;
+      }
+      #sibling-list li:hover {
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment 3</h1>
+
+    <!-- Q1 -->
+    <section>
+      <h2>1. Text &amp; Color Buttons</h2>
+      <p id="q1-text">
+        The miracle your're looking for is in the work your're avoiding!
+      </p>
+      <button id="q1-hello-btn">Say Hello</button>
+      <button id="q1-red-btn">Make Red</button>
+
+      <script>
+        const q1Text = document.getElementById("q1-text");
+        document
+          .getElementById("q1-hello-btn")
+          .addEventListener("click", function () {
+            q1Text.textContent = "Hello";
+          });
+        document
+          .getElementById("q1-red-btn")
+          .addEventListener("click", function () {
+            q1Text.style.color = "red";
+            q1Text.style.fontWeight = "bold";
+          });
+      </script>
+    </section>
+
+    <!-- Q2 -->
+    <section>
+      <h2>2. Simple Featured Clothings Gallery</h2>
+      <div id="gallery">
+        <img
+          id="main-image"
+          src="../images/featured1.jpeg"
+          alt="Main display"
+        />
+        <ul class="thumb-list">
+          <li onclick="changeImage('../images/featured1.jpeg')">Featured 1</li>
+          <li onclick="changeImage('../images/featured2.jpeg')">Featured 2</li>
+          <li onclick="changeImage('../images/featured3.jpeg')">Featured 3</li>
+        </ul>
+      </div>
+
+      <script>
+        function changeImage(filename) {
+          document.getElementById("main-image").src = filename;
+        }
+      </script>
+    </section>
+
+    <!-- Q3 -->
+    <section>
+      <h2>3. To-Do List with Strike-Through</h2>
+      <ul id="todo-list">
+        <li>
+          <span>Finish ISHub Assignment</span
+          ><button class="delete-btn">Delete</button>
+        </li>
+        <li>
+          <span>Attend Techmentorship</span
+          ><button class="delete-btn">Delete</button>
+        </li>
+        <li>
+          <span>Walk for 20 minutes</span
+          ><button class="delete-btn">Delete</button>
+        </li>
+        <li>
+          <span>Read a chapter from Big Magic.</span
+          ><button class="delete-btn">Delete</button>
+        </li>
+        <li>
+          <span>Watch an episode of Suits.</span
+          ><button class="delete-btn">Delete</button>
+        </li>
+      </ul>
+
+      <script>
+        const todoList = document.getElementById("todo-list");
+
+        todoList.addEventListener("click", function (e) {
+          if (e.target.tagName === "SPAN") {
+            e.target.closest("li").classList.toggle("done");
+          } else if (e.target.classList.contains("delete-btn")) {
+            e.target.closest("li").remove();
+          }
+        });
+      </script>
+    </section>
+
+    <!-- Q4 -->
+    <section>
+      <h2>4. Counter App</h2>
+      <button id="decrement-btn">-</button>
+      <span id="count-display">0</span>
+      <button id="increment-btn">+</button>
+
+      <script>
+        let count = 0;
+        const countDisplay = document.getElementById("count-display");
+
+        document
+          .getElementById("increment-btn")
+          .addEventListener("click", function () {
+            count++;
+            countDisplay.textContent = count;
+          });
+
+        document
+          .getElementById("decrement-btn")
+          .addEventListener("click", function () {
+            if (count > 0) {
+              count--;
+              countDisplay.textContent = count;
+            }
+          });
+      </script>
+    </section>
+
+    <!-- Q5 -->
+    <section>
+      <h2>5. Next Sibling Traversal</h2>
+      <p>
+        Click a list item to log the text of the
+        <em><strong>next</strong></em> item (check the console).
+      </p>
+      <ul id="sibling-list">
+        <li>Reading</li>
+        <li>Sleeping</li>
+        <li>Studying</li>
+        <li>Exercising</li>
+        <li>Scrolling</li>
+      </ul>
+
+      <script>
+        function logNextSibling(item) {
+          const next = item.nextElementSibling;
+          if (next) {
+            console.log(next.textContent);
+          } else {
+            console.log("No more items");
+          }
+        }
+
+        document
+          .getElementById("sibling-list")
+          .addEventListener("click", function (e) {
+            if (e.target.tagName === "LI") {
+              logNextSibling(e.target);
+            }
+          });
+      </script>
+    </section>
+  </body>
+</html>
